@@ -6,18 +6,6 @@ type ProfileImageProps = {
   profileImage: IGatsbyImageData
 }
 
-const ProfileImageWrapper = styled(GatsbyImage)`
-  width: 120px;
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 50%;
-
-  @media (max-width: 768px) {
-    width: 80px;
-    height: 80px;
-  }
-`
-
 const ProfileImage: FunctionComponent<ProfileImageProps> = function ({
   profileImage,
 }) {
@@ -25,3 +13,15 @@ const ProfileImage: FunctionComponent<ProfileImageProps> = function ({
 }
 
 export default ProfileImage
+
+const ProfileImageWrapper = styled(GatsbyImage)`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 14px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
+`

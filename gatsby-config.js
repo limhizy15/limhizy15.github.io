@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `hoodie의 개발일기`,
+    title: `Hoodie | Dev Diary`,
     description: `개발에 관련된 모든 글들을 업로드합니다.`,
     author: `limhizy15`,
     siteUrl: 'https://limhizy15.github.io/',

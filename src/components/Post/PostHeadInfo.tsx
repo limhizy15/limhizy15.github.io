@@ -9,14 +9,40 @@ export type PostHeadInfoProps = {
   categories: string[]
 }
 
+const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
+  title,
+  date,
+  categories,
+}) {
+  const goBackPage = () => window.history.back()
+
+  return (
+    <PostHeadInfoWrapper>
+      <PrevPageIcon onClick={goBackPage}>
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </PrevPageIcon>
+      <Title>{title}</Title>
+      <PostData>
+        <div>{categories.join(' / ')}</div>
+        <div>{date}</div>
+      </PostData>
+    </PostHeadInfoWrapper>
+  )
+}
+
+export default PostHeadInfo
+
 const PostHeadInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  // align-items: center;
+  justify-contents: center;
   width: 768px;
-  height: 100%;
+  height: 300px;
   margin: 0 auto;
   padding: 60px 0;
-  color: #ffffff;
+  color: black;
+  // border: red solid 4px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -75,26 +101,3 @@ const PostData = styled.div`
     font-weight: 400;
   }
 `
-
-const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
-  title,
-  date,
-  categories,
-}) {
-  const goBackPage = () => window.history.back()
-
-  return (
-    <PostHeadInfoWrapper>
-      <PrevPageIcon onClick={goBackPage}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </PrevPageIcon>
-      <Title>{title}</Title>
-      <PostData>
-        <div>{categories.join(' / ')}</div>
-        <div>{date}</div>
-      </PostData>
-    </PostHeadInfoWrapper>
-  )
-}
-
-export default PostHeadInfo

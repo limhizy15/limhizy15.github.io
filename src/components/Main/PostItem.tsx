@@ -6,23 +6,48 @@ import { PostFrontmatterType } from 'types/PostItem.types'
 
 type PostItemProps = PostFrontmatterType & { link: string }
 
+const PostItem: FunctionComponent<PostItemProps> = function ({
+  title,
+  date,
+  categories,
+  summary,
+  thumbnail: {
+    childImageSharp: { gatsbyImageData },
+  },
+  link,
+}) {
+  return (
+    <PostItemWrapper to={link}>
+      {/* <ThumbnailImage image={gatsbyImageData} alt="Post Item Image" /> */}
+
+      <PostItemContent>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <Category>
+          {categories.map(item => (
+            <CategoryItem key={item}>{item}</CategoryItem>
+          ))}
+        </Category>
+        <Summary>{summary}</Summary>
+      </PostItemContent>
+    </PostItemWrapper>
+  )
+}
+
+export default PostItem
+
 const PostItemWrapper = styled(Link)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   transition: 0.3s box-shadow;
   cursor: pointer;
+  margin-bottom: 20px;
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-`
-
-const ThumbnailImage = styled(GatsbyImage)`
-  width: 100%;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
 `
 
 const PostItemContent = styled.div`
@@ -30,6 +55,12 @@ const PostItemContent = styled.div`
   display: flex;
   flex-direction: column;
   padding: 15px;
+`
+
+const ThumbnailImage = styled(GatsbyImage)`
+  width: 40%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
 `
 
 const Title = styled.div`
@@ -42,7 +73,7 @@ const Title = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
 `
 
 const Date = styled.div`
@@ -80,33 +111,3 @@ const Summary = styled.div`
   font-size: 16px;
   opacity: 0.8;
 `
-
-const PostItem: FunctionComponent<PostItemProps> = function ({
-  title,
-  date,
-  categories,
-  summary,
-  thumbnail: {
-    childImageSharp: { gatsbyImageData },
-  },
-  link,
-}) {
-  return (
-    <PostItemWrapper to={link}>
-      <ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
-
-      <PostItemContent>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
-        <Category>
-          {categories.map(item => (
-            <CategoryItem key={item}>{item}</CategoryItem>
-          ))}
-        </Category>
-        <Summary>{summary}</Summary>
-      </PostItemContent>
-    </PostItemWrapper>
-  )
-}
-
-export default PostItem

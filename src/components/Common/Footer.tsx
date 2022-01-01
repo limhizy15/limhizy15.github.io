@@ -16,12 +16,7 @@ const FooterWrapper = styled.footer`
 `
 
 const Footer: FunctionComponent = function () {
-  return (
-    <FooterWrapper>
-      Thank You for Visiting My Blog, Have a Good Day 😆
-      <br />© 2021 Developer Hyun, Powered By Gatsby.
-    </FooterWrapper>
-  )
+  return <FooterWrapper>©임희지, Powered By Gatsby.</FooterWrapper>
 }
 
 export default Footer
