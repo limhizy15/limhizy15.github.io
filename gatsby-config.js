@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `hoodie의 개발일기`,
     description: `개발에 관련된 모든 글들을 업로드합니다.`,
-    author: `hoodie`,
-    siteUrl: 'https://my-website-link.com', // 배포 후 변경 예정
+    author: `limhizy15`,
+    siteUrl: 'https://limhizy15.github.io/',
   },
   plugins: [
     {
@@ -83,7 +83,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'my-website-link.com',
+        siteUrl: 'https://limhizy15.github.io/',
         stripQueryString: true,
       },
     },
