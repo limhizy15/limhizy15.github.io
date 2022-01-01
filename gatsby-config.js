@@ -3,7 +3,7 @@ module.exports = {
     title: `hoodie의 개발일기`,
     description: `개발에 관련된 모든 글들을 업로드합니다.`,
     author: `hoodie`,
-    siteUrl: '<https://my-website-link.com>', // 배포 후 변경 예정
+    siteUrl: 'https://my-website-link.com', // 배포 후 변경 예정
   },
   plugins: [
     {
@@ -78,6 +78,20 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'my-website-link.com',
+        stripQueryString: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
