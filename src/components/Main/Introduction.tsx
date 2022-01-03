@@ -17,9 +17,9 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 
         <div>
           <Title>
-            Hoodie<PointText>.</PointText>diary
+            Heeji<PointText>.</PointText>일지
           </Title>
-          <SubTitle>FE개발자의 주저리</SubTitle>
+          <SubTitle>(핵 신입) FE 개발자의 주저리</SubTitle>
         </div>
       </Wrapper>
     </Background>

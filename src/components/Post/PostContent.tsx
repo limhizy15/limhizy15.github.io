@@ -14,28 +14,53 @@ const MarkdownRenderer = styled.div`
   padding: 30px 0;
   word-break: break-all;
 
-  // Markdown Style
-  line-height: 1.8;
-  font-size: 16px;
+  // Image Style
+  img {
+    width: 768px;
+    height: auto;
+  }
+
+  // * Markdown Style
   font-weight: 400;
+  font-size: 1em;
+  line-height: 1.8em;
+  // word-spacing: -1px;
 
   // Apply Padding Attribute to All Elements
   p {
-    padding: 3px 0;
+    padding: 10px 0;
   }
 
   // Adjust Heading Element Style
+
   h1,
   h2,
   h3 {
-    font-weight: 800;
-    margin-bottom: 30px;
+    font-family: 'Do Hyeon', sans-serif;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 7px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.6em;
+    margin-bottom: 3px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-bottom: 5px;
   }
 
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   hr + h1,
@@ -44,42 +69,31 @@ const MarkdownRenderer = styled.div`
     margin-top: 0;
   }
 
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 25px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
   // Adjust Quotation Element Style
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
-    border-left: 2px solid #000000;
-    font-weight: 800;
+    border-left: 2px solid #000;
+    font-weight: 600;
+    background-color: #eceff4;
   }
 
   // Adjust List Element Style
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
+    padding: 10px 0;
   }
 
   // Adjust Horizontal Rule style
   hr {
-    border: 1px solid #000000;
-    margin: 100px 0;
+    border: 1px solid #d8dee9;
+    margin: 40px 0;
   }
 
   // Adjust Link Element Style
   a {
-    color: #4263eb;
+    color: #9c877c;
     text-decoration: underline;
   }
 
@@ -93,6 +107,11 @@ const MarkdownRenderer = styled.div`
       background: rgba(255, 255, 255, 0.5);
       border-radius: 3px;
     }
+  }
+
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background: #2d2d2d;
   }
 
   code[class*='language-'],

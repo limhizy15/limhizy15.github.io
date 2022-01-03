@@ -35,14 +35,12 @@ export default PostHeadInfo
 const PostHeadInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  // align-items: center;
   justify-contents: center;
   width: 768px;
   height: 300px;
   margin: 0 auto;
   padding: 60px 0;
   color: black;
-  // border: red solid 4px;
 
   @media (max-width: 768px) {
     width: 100%;
