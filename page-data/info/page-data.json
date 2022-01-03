@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-info-tsx",
     "path": "/info/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"hoodie의 개발일기","description":"개발에 관련된 모든 글들을 업로드합니다.","author":"limhizy15"}}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"블로그 - 임희지","description":"개발에 관련된 모든 글들을 업로드합니다.","author":"limhizy15"}}},"pageContext":{}},
     "staticQueryHashes": []}
