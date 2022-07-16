@@ -1,0 +1,27 @@
+{
+  "name": "limhizy15.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^2.0.0-rc.2",
+    "@mdx-js/react": "^2.0.0-rc.2",
+    "@reach/disclosure": "^0.17.0",
+    "@reach/tooltip": "^0.17.0",
+    "gray-matter": "^4.0.3",
+    "next": "12.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rehype-highlight": "^5.0.2",
+    "remark-frontmatter": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.2"
+  }
+}
