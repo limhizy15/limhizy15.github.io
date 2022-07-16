@@ -3,3 +3,10 @@
 - typescript로 마이그레이션 필요..
 - 지금은 static meta를 사용하지만 seo를 위해서는 next/seo같은거 써야할 것임
 - https://nextjs.org/docs/advanced-features/custom-document
+
+# TODO
+- [ ] TypeScript 변환
+- [ ] 폴더구조 변경
+- [ ] 필요한 부분만 mdx 쓰도록
+- [ ] getStaticProps에 대한 정확한 이해 필요
+- [ ] 디자인
