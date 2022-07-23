@@ -24,7 +24,7 @@ export const getPosts = (pageIndex) => {
     })
     .filter((post) => post);
 
-  return filterPostsByPageIndex(createMultiplePosts(posts), pageIndex);
+  return posts;
 };
 
 const createMultiplePosts = (posts) => {

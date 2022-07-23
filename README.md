@@ -10,3 +10,7 @@
 - [ ] 필요한 부분만 mdx 쓰도록
 - [ ] getStaticProps에 대한 정확한 이해 필요
 - [ ] 디자인
+
+# TroubleShoot
+- YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 3, column 12:
+    publishedOn: January, 9th. 2022
